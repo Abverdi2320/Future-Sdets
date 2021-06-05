@@ -15,7 +15,7 @@ public class VYTRACK {
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://qa3.vytrack.com/user/login");
     }
 
@@ -33,7 +33,7 @@ public class VYTRACK {
         String expTitle = "Dashboard";
         String actTitle = driver.getTitle();
         System.out.println("actTitle = " + actTitle);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         WebElement fleetTest = driver.findElement(By.xpath("//span[@class='title title-level-1']"));
         fleetTest.click();
