@@ -1,6 +1,7 @@
 package day9_proproties_browser_utils;
 
 import org.testng.annotations.Test;
+import utilities.ConfigurationReader;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -25,6 +26,14 @@ public class ReadingProperties {
         System.out.println("properties.getProperty(\"browser\") = " + properties.getProperty("browser"));
         System.out.println("properties.getProperty(\"env\") = " + properties.getProperty("env"));
         System.out.println("properties.getProperty(\"username\") = " + properties.getProperty("username"));
+
+    }
+
+    
+    @Test
+    public void using_properties_method(){
+        System.out.println("ConfigurationReader.getProperty(\"browser\") = " + ConfigurationReader.getProperty("browser"));
+        System.out.println("ConfigurationReader.getProperty(\"env\") = " + ConfigurationReader.getProperty("env"));
 
     }
 }

@@ -21,11 +21,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Smartbearsoftwarelinkverification {
     WebDriver driver;
-    String url;
-    WebElement username;
-    WebElement passWord;
-    WebElement clickButton;
-    WebElement links;
 
     @BeforeClass
     public void SetUp(){
@@ -36,13 +31,8 @@ public class Smartbearsoftwarelinkverification {
     }
     @Test
     public void tearDown(){
-        WebElement username = driver.findElement(By.cssSelector("input[id='ctl00_MainContent_username']"));
-        username.sendKeys("Tester");
+        loginToSmartBear.driver(driver);
 
-        WebElement password = driver.findElement(By.cssSelector("input[id='ctl00_MainContent_password']"));
-        password.sendKeys("test");
-
-        driver.findElement(By.xpath("//input[@type='submit']")).click();
 
         List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
         System.out.println(allLinks.size());
