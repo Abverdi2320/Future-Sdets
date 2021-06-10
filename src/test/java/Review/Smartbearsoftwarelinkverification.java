@@ -1,13 +1,9 @@
 package Review;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 import utilities.WebDriverFactory;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 /*
 1.Open browser
@@ -29,17 +25,15 @@ public class Smartbearsoftwarelinkverification {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
     }
-    @Test
-    public void tearDown(){
-        loginToSmartBear.driver(driver);
-
-
-        List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
-        System.out.println(allLinks.size());
-        for (WebElement each : allLinks) {
-            System.out.println(each.getText());
-        }
-    }
-
-
+//    @Test
+//    public void tearDown(){
+//        loginToSmartBear.FakerObject(driver);
+//
+//
+//        List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
+//        System.out.println(allLinks.size());
+//        for (WebElement each : allLinks) {
+//            System.out.println(each.getText());
+//        }
+//    }
 }
