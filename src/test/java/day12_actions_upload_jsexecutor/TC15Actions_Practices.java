@@ -50,4 +50,20 @@ public class TC15Actions_Practices {
 
 
     }
+
+    @Test(priority = 1)
+    public void scrolling_Test(){
+        // Go to http://practice.cybertekschool.com/
+        Driver.getDriver().get("http://practice.cybertekschool.com/");
+
+        //Scroll down to "Powered by Cybertek School"
+
+        Actions actions = new Actions(Driver.getDriver());
+        //Locate "Powered by Cybertek School"
+        WebElement cybertekSchoolLink = Driver.getDriver().findElement(By.linkText("Cybertek School"));
+
+        //Scroll using actions object
+        BrowserUtils.sleep(2);
+        actions.moveToElement(cybertekSchoolLink).perform();
+    }
 }
