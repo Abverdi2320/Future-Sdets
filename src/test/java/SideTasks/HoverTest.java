@@ -18,7 +18,7 @@ public class HoverTest {
      */
 
     @Test
-    public void testingHover(){
+    public void testingDrag(){
         //go to url
         Driver.getDriver().get("https://demos.telerik.com/kendo-ui/dragdrop/index");
 

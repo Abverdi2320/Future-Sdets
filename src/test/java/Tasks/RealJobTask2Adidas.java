@@ -1,3 +1,5 @@
+package Tasks;
+
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -18,6 +20,7 @@ public class RealJobTask2Adidas {
     @BeforeMethod
     public void setup(){
         driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.demoblaze.com/index.html");
     }
@@ -57,6 +60,7 @@ public class RealJobTask2Adidas {
         BrowserUtils.sleep(1);
         String confirmation = driver.findElement(By.xpath("//p[@class='lead text-muted']")).getText();
         System.out.println("confirmation = " + confirmation);
+
 
 
 
